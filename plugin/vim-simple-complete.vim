@@ -28,10 +28,9 @@ fun! s:CurrentChar()
 endfun
 
 fun! s:TypeCompletePlugin()
-    set completeopt+=menu
-    set completeopt+=menuone
-    set completeopt+=noselect
-    set pumheight=10
+    setlocal completeopt+=menu
+    setlocal completeopt+=menuone
+    setlocal completeopt+=noselect
     let s:vsc_typed_length = 0
     imap <silent> <expr> <plug>(TypeCompleteCommand) <sid>TypeCompleteCommand()
 
